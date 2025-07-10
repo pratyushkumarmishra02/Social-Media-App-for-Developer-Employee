@@ -1,0 +1,76 @@
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    android:background="@android:color/white">
+
+    <!-- Project Banner -->
+    <ImageView
+        android:id="@+id/projectImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/person" />
+
+    <!-- Gradient Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiant_overly" />
+
+    <!-- Text Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/projectTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textSize="20sp"
+            android:paddingStart="16dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/projectDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textSize="14sp"
+            android:paddingStart="16dp"
+            android:textColor="#DDDDDD"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/projectTech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textSize="12sp"
+            android:paddingStart="16dp"
+            android:textColor="#BBBBBB"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/viewProjectBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/red_bg"
+            android:textSize="20sp"
+            android:layout_gravity="end"
+            android:paddingVertical="8dp"
+            android:text="@string/view_project"
+            android:textColor="@color/white"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

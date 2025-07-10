@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/main_color"
+    tools:context=".Activities.ReelPickActivity">
+
+    <ImageView
+        android:id="@+id/btnClose1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintBottom_toTopOf="@+id/playerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/btnNext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="20dp"
+        android:padding="8dp"
+        android:text="@string/next"
+        android:textColor="#007AFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/playerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnClose1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFF"
+        app:layout_constraintDimensionRatio="9:16"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btnClose1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:use_controller="true"
+        app:resize_mode="fit" />
+
+
+    <ImageView
+        android:id="@+id/btnAddAudio"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        app:tint="@color/white"
+        android:visibility="gone"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_sound_on"
+        app:layout_constraintTop_toTopOf="@id/playerView"
+        app:layout_constraintEnd_toEndOf="@id/playerView" />
+
+
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/editOptionsBar"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="12dp"-->
+<!--        android:background="@drawable/edittext_background"-->
+<!--        android:elevation="6dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginBottom="88dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/musicSelect"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center">-->
+<!--            <ImageView-->
+<!--                android:src="@drawable/ic_music"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp" />-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:text="@string/audio"-->
+<!--                android:textSize="13sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:layout_marginTop="4dp" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/textEditing"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center">-->
+<!--            <ImageView-->
+<!--                android:src="@drawable/ic_text"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp" />-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:text="@string/text"-->
+<!--                android:textSize="13sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:layout_marginTop="4dp" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/editEmoji"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center">-->
+<!--            <ImageView-->
+<!--                android:src="@drawable/ic_emoji"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp" />-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:text="@string/add_emoji"-->
+<!--                android:textSize="13sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:layout_marginTop="4dp" />-->
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/hintForSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/please_select_a_video"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFloat"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="313dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_play_circle"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

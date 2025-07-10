@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.folionet">
+    <!-- <uses-sdk -->
+    <!-- android:minSdkVersion="24" -->
+    <!-- tools:overrideLibrary="com.google.android.material" /> -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FolioNet"
+        tools:targetApi="35">
+        <activity
+            android:name=".Activities.ThumbnailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ReelPickActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.NextUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ImageSectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".Activities.ProfilePageActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".Activities.UploadImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.PersonalInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.FaqsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.FacebookLoginActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".Activities.DashBoardActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".Activities.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.IntroActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.auth.api.phone.SMS_CODE_AUTO_VERIFY_TIMEOUT"
+            android:value="5" /> <!-- <activity -->
+        <!-- android:name="com.facebook.FacebookActivity" -->
+        <!-- android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" -->
+        <!-- tools:replace="android:theme" /> -->
+        <!-- <provider -->
+        <!-- android:name="com.facebook.internal.FacebookInitProvider" -->
+        <!-- android:authorities="com.facebook.app.FacebookContentProvider.1043647184375755" -->
+        <!-- android:exported="false" -->
+        <!-- tools:replace="android:authorities" /> -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- for resize -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>
